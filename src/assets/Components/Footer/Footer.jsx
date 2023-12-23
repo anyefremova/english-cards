@@ -1,5 +1,12 @@
 import './Footer.scss';
 
-function Footer() {
+export default function Footer() {
 
+    return (
+        <div class="footer">
+            <p class="footer__information">
+                Контакты
+            </p>
+        </div>
+    )
 }

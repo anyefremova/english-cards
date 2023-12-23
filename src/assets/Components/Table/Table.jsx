@@ -1,5 +1,10 @@
 import './Table.scss';
 
-function Table() {
+export default function Table() {
 
+    return (
+        <div class="table__section">
+            <h2 class="table__title">Слово</h2>
+        </div>
+    )
 }
