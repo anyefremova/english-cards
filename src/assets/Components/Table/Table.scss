@@ -1,0 +1,9 @@
+.table__hedings {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .table__headings__section {
+        margin: 0 5px;
+    }
+}
