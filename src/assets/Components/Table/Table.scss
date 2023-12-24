@@ -4,13 +4,19 @@
 .table__words {
     font-family: $font-family;
     background: $gray;
+    padding: 10vh;
 
     .table__hedings {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 0 0 2vh 0;
 
         .table__headings__section {
             margin: 0 5px;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
         }
     }
 
