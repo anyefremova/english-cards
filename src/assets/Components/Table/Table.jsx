@@ -11,7 +11,12 @@ export default function Table() {
                 <div class="table__headings__section">Редактирование</div>
             </div>
             <div class="table__section">
-
+                <div class="table__section__string">mom</div>
+                <div class="table__section__string">мама</div>
+                <div class="table__section__string">[mɒm]</div>
+                <div class="table__section__string">
+                    <button class="word__edit">Редактировать</button>
+                </div>
             </div>
         </div>
     )
