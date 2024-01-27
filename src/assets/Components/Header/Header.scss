@@ -3,4 +3,12 @@
 
 .header {
     font-family: $font-family;
+    display: flex;
+    justify-content: space-between;
+
+    .header__menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3vw;
+    }
 }
