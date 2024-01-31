@@ -10,7 +10,7 @@
     {
         "id": "15016",
         "english": "apple",
-        "transcription": "[ывап]",
+        "transcription": "[æpl]",
         "russian": "яблоко",
         "tags": "фрукты",
         "tags_json": "[\"u0444u0440u0443u043au0442u044b\"]"
@@ -20,7 +20,7 @@
         "english": "prettier ",
         "transcription": "[‘priti]",
         "russian": "милый",
-        "tags": "",
+        "tags": "качество",
         "tags_json": "[\"\"]"
     },
     {
@@ -68,7 +68,7 @@
         "english": "tremendous",
         "transcription": "[trəˈmendəs]",
         "russian": "огромный",
-        "tags": "с1",
+        "tags": "свойство",
         "tags_json": "[\"u04411\"]"
     },
     {
@@ -76,7 +76,7 @@
         "english": "giant",
         "transcription": "[ˈjīənt]",
         "russian": "гигант",
-        "tags": "b1",
+        "tags": "человек",
         "tags_json": "[\"b1\"]"
     }
 ]
