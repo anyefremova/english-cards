@@ -20,10 +20,15 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+
+        .button__image {
+            width: 22px;
+            height: 22px;
+        }
     }
 }
 
-.table__section {
+/*.table__section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
@@ -52,3 +57,4 @@
         }
     }
 }
+*/
