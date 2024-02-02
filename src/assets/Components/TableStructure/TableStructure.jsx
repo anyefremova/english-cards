@@ -37,10 +37,10 @@ export default function TableStructure(props) {
                             <img
                                 src='/src/assets/images/editButton.png'
                                 alt='Edit button'
-                                className='editing__image'
+                                className='editing__image image__edit'
                                 onClick={handleEditClick}
                             />
-                            <img src='/src/assets/images/deleteButton.png' alt='Delete button' className='editing__image' />
+                            <img src='/src/assets/images/deleteButton.png' alt='Delete button' className='editing__image image__delete' />
                         </div>
                     </>
                 )}
