@@ -1,6 +1,21 @@
 import './TableStructure.scss';
 
+import { useState } from 'react';
+
 export default function TableStructure(props) {
+    const [isEditing, setIsEditing] = useState(false);
+
+    const handleEditClick = () => {
+        setIsEditing(!isEditing);
+    };
+
+    const handleSaveClick = () => {
+        setIsEditing(false);
+    };
+
+    const handleCancelClick = () => {
+        setIsEditing(false);
+    };
 
     return (
         <div className='table__hedings__content'>
@@ -9,9 +24,23 @@ export default function TableStructure(props) {
             <div className='table__headings__transcription'>{props.transcription}</div>
             <div className='table__headings__category'>{props.category}</div>
             <div className='table__headings__edit'>
-                <img src="/src/assets/images/editButton.png" alt="Edit button" className='button__image' />
-                <img src="/src/assets/images/deleteButton.png" alt="Delete button" className='button__image' />
+                {isEditing ? (
+                    <>
+                        <button onClick={handleSaveClick}>Save</button>
+                        <button onClick={handleCancelClick}>Cancel</button>
+                    </>
+                ) : (
+                    <>
+                        <img
+                            src="/src/assets/images/editButton.png"
+                            alt="Edit button"
+                            className='button__image'
+                            onClick={handleEditClick}
+                        />
+                        <img src="/src/assets/images/deleteButton.png" alt="Delete button" className='button__image' />
+                    </>
+                )}
             </div>
         </div>
-    )
+    );
 }
