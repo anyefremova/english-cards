@@ -26,18 +26,22 @@ export default function TableStructure(props) {
             <div className='table__headings__edit'>
                 {isEditing ? (
                     <>
-                        <button onClick={handleSaveClick}>Save</button>
-                        <button onClick={handleCancelClick}>Cancel</button>
+                        <div className='editing__buttons'>
+                            <button onClick={handleSaveClick} className='button__editing button__save'>Save</button>
+                            <button onClick={handleCancelClick} className='button__editing button__cancel'>Cancel</button>
+                        </div>
                     </>
                 ) : (
                     <>
-                        <img
-                            src="/src/assets/images/editButton.png"
-                            alt="Edit button"
-                            className='button__image'
-                            onClick={handleEditClick}
-                        />
-                        <img src="/src/assets/images/deleteButton.png" alt="Delete button" className='button__image' />
+                        <div className='editing__images'>
+                            <img
+                                src='/src/assets/images/editButton.png'
+                                alt='Edit button'
+                                className='editing__image'
+                                onClick={handleEditClick}
+                            />
+                            <img src='/src/assets/images/deleteButton.png' alt='Delete button' className='editing__image' />
+                        </div>
                     </>
                 )}
             </div>
