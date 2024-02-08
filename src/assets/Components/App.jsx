@@ -1,8 +1,9 @@
-import './App.css';
+import './App.scss';
 import Header from './Header/Header.jsx';
 import Main from './Main/Main.jsx';
 import Footer from './Footer/Footer.jsx';
 import TableWithWords from './TableWithWords/TableWithWords.jsx';
+import CardList from './CardList/Cardlist.jsx';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
             <Header />
             <Main />
             <TableWithWords />
+            <CardList />
             <Footer />
         </div >
     )

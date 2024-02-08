@@ -1,0 +1,9 @@
+@import '/src/assets/style/fonts.scss';
+@import '/src/assets/style/vars.scss';
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: $font-family;
+}
