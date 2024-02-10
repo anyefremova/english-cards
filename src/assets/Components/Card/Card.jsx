@@ -8,7 +8,7 @@ export default function Card(props) {
                     <div className='card__word'>{props.word}</div>
                     <div className='card__transcription'>{props.transcription}</div>
                 </div>
-                <div className='card__buttob'>
+                <div className='card__button'>
                     <button className='check__translate'>Проверить</button>
                 </div>
             </div>
