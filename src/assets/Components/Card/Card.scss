@@ -1,0 +1,15 @@
+@import '/src/assets/style/vars.scss';
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card__structure {
+        background-color: $dark_blue;
+        color: $gray;
+        width: 20vw;
+        margin: 3vw 0;
+        padding: 2vw 0;
+    }
+}
