@@ -1,6 +1,6 @@
 import './TableWithWords.scss';
 
-import TableStructure from '../TableStructure/TableStructure'
+import TableStructure from '../TableStructure/TableStructure';
 import wordsData from '../../data/words.json'
 
 export default function TableWithWords() {
