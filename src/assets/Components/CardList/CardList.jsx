@@ -14,6 +14,7 @@ export default function CardList() {
                             key={word.id}
                             word={word.english}
                             transcription={word.transcription}
+                            translate={word.russian}
                         />)
                 })}
             </div>

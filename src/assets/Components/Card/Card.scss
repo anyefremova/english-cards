@@ -6,19 +6,32 @@
     align-items: center;
 
     .card__structure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         background-color: $dark_blue;
         color: $gray;
-        width: 20vw;
+        min-width: 35vw;
+        min-height: 45vh;
         margin: 3vw 0;
         padding: 3vw 0;
+        border-radius: 8%;
 
         .card__word {
             font-weight: 700;
-            font-size: 1.75rem;
+            font-size: 2.75rem;
         }
 
         .card__transcription {
             opacity: 0.75;
+            font-size: 1.25rem;
+        }
+
+        .card__translate {
+            color: #F7941D;
+            margin-top: 7vh;
+            font-weight: 700;
+            font-size: 1.75rem;
         }
 
         .check__translate {
@@ -28,6 +41,7 @@
             color: white;
             background: transparent;
             cursor: pointer;
+            font-size: 1.45em;
 
             &:hover {
                 color: black;
