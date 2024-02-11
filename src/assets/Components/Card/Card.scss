@@ -31,7 +31,7 @@
 
             &:hover {
                 color: black;
-                border: 2px solid radial-gradient(circle at left top, #F7941D, #27AAE1);
+                border: 2px solid #F7941D;
                 background: radial-gradient(circle at left top, #F7941D, #27AAE1);
                 transition: background-color 0.8s, color 0.8s, border-color 0.8s;
             }
