@@ -52,10 +52,10 @@
     }
 
     .image__edit:hover {
-        filter: drop-shadow(4px 4px 6px #27AAE1);
+        @extend %drop_shadow_blue;
     }
 
     .image__delete:hover {
-        filter: drop-shadow(4px 4px 6px #F7941D);
+        @extend %drop_shadow_orange;
     }
 }

@@ -1,3 +1,5 @@
+@import '/src/assets/style/vars.scss';
+
 .card__element {
     display: flex;
     justify-content: center;
@@ -14,10 +16,10 @@
     }
 
     .arrow__left:hover {
-        filter: drop-shadow(4px 4px 6px #27AAE1);
+        @extend %drop_shadow_blue;
     }
 
     .arrow__right:hover {
-        filter: drop-shadow(4px 4px 6px #F7941D);
+        @extend %drop_shadow_orange;
     }
 }

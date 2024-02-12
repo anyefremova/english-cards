@@ -4,3 +4,11 @@ $orange: #F7941D;
 $blue: #27AAE1;
 $dark_blue: #00093C;
 $gray: #F6F7F9;
+
+%drop_shadow_blue {
+    filter: drop-shadow(4px 4px 6px #27AAE1);
+}
+
+%drop_shadow_orange {
+    filter: drop-shadow(4px 4px 6px #F7941D);
+}
