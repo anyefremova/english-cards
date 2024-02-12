@@ -25,7 +25,9 @@ export default function CardList({ initialCardIndex = 0 }) {
             <h2 className='card__title'>Карточки</h2>
             <div className='card__element'>
                 <div className='left__button'>
-                    <img src={arrowLeft} alt="Стрелка влево" onClick={goToPreviousCard} className="arrow__button" />
+                    {currentCardIndex > 0 && (
+                        <img src={arrowLeft} alt="Стрелка влево" onClick={goToPreviousCard} className="arrow__button" />
+                    )}
                 </div>
                 <div className='card__container'>
                     {currentCardIndex < wordsData.length && (
@@ -38,7 +40,9 @@ export default function CardList({ initialCardIndex = 0 }) {
                     )}
                 </div>
                 <div className='right__button'>
-                    <img src={arrowRight} alt="Стрелка вправо" onClick={goToNextCard} className="arrow__button" />
+                    {currentCardIndex < wordsData.length - 1 && (
+                        <img src={arrowRight} alt="Стрелка вправо" onClick={goToNextCard} className="arrow__button" />
+                    )}
                 </div>
             </div>
         </div>
