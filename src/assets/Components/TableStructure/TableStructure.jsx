@@ -1,4 +1,6 @@
 import './TableStructure.scss';
+import editButton from '../../images/editButton.png';
+import deleteButton from '../../images/deleteButton.png'
 
 import { useState } from 'react';
 
@@ -27,20 +29,15 @@ export default function TableStructure(props) {
                 {isEditing ? (
                     <>
                         <div className='editing__buttons'>
-                            <button onClick={handleSaveClick} className='button__editing button__save'>Save</button>
-                            <button onClick={handleCancelClick} className='button__editing button__cancel'>Cancel</button>
+                            <button onClick={handleSaveClick} className='button__editing button__save'>Сохранить</button>
+                            <button onClick={handleCancelClick} className='button__editing button__cancel'>Отменить</button>
                         </div>
                     </>
                 ) : (
                     <>
                         <div className='editing__images'>
-                            <img
-                                src='/src/assets/images/editButton.png'
-                                alt='Edit button'
-                                className='editing__image image__edit'
-                                onClick={handleEditClick}
-                            />
-                            <img src='/src/assets/images/deleteButton.png' alt='Delete button' className='editing__image image__delete' />
+                            <img src={editButton} alt='Кнопка редактирования' className='editing__image image__edit' onClick={handleEditClick} />
+                            <img src={deleteButton} alt='Кнопка удаления' className='editing__image image__delete' />
                         </div>
                     </>
                 )}

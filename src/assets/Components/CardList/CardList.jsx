@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './CardList.scss';
 import Card from '../Card/Card.jsx';
 import wordsData from '../../data/words.json';
+import arrowLeft from '../../images/arrowLeft.png';
+import arrowRight from '../../images/arrowRight.png';
 
 export default function CardList({ initialCardIndex = 0 }) {
     const [currentCardIndex, setCurrentCardIndex] = useState(initialCardIndex);
@@ -13,7 +15,6 @@ export default function CardList({ initialCardIndex = 0 }) {
     };
 
     const goToNextCard = () => {
-        event.preventDefault()
         if (currentCardIndex < wordsData.length - 1) {
             setCurrentCardIndex(currentCardIndex + 1);
         }
@@ -24,7 +25,7 @@ export default function CardList({ initialCardIndex = 0 }) {
             <h2 className='card__title'>Карточки</h2>
             <div className='card__element'>
                 <div className='left__button'>
-                    Кнопка влево
+                    <img src={arrowLeft} alt="Стрелка влево" onClick={goToPreviousCard} className="arrow__button" />
                 </div>
                 <div className='card__container'>
                     {currentCardIndex < wordsData.length && (
@@ -37,7 +38,7 @@ export default function CardList({ initialCardIndex = 0 }) {
                     )}
                 </div>
                 <div className='right__button'>
-                    Кнопка вправо
+                    <img src={arrowRight} alt="Стрелка вправо" onClick={goToNextCard} className="arrow__button" />
                 </div>
             </div>
         </div>
