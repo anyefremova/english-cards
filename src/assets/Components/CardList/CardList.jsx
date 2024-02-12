@@ -26,7 +26,7 @@ export default function CardList({ initialCardIndex = 0 }) {
             <div className='card__element'>
                 <div className='left__button'>
                     {currentCardIndex > 0 && (
-                        <img src={arrowLeft} alt="Стрелка влево" onClick={goToPreviousCard} className="arrow__button" />
+                        <img src={arrowLeft} alt="Стрелка влево" onClick={goToPreviousCard} className="arrow__button arrow__left" />
                     )}
                 </div>
                 <div className='card__container'>
@@ -41,7 +41,7 @@ export default function CardList({ initialCardIndex = 0 }) {
                 </div>
                 <div className='right__button'>
                     {currentCardIndex < wordsData.length - 1 && (
-                        <img src={arrowRight} alt="Стрелка вправо" onClick={goToNextCard} className="arrow__button" />
+                        <img src={arrowRight} alt="Стрелка вправо" onClick={goToNextCard} className="arrow__button arrow__right" />
                     )}
                 </div>
             </div>
@@ -49,40 +49,3 @@ export default function CardList({ initialCardIndex = 0 }) {
 
     );
 }
-/*export default function CardList() {
-    const [currentCardIndex, setCurrentCardIndex] = useState(0);
-
-    const goToPreviousCard = () => {
-        if (currentCardIndex > 0) {
-            setCurrentCardIndex(currentCardIndex - 1);
-        }
-    };
-
-    const goToNextCard = () => {
-        if (currentCardIndex < wordsData.length - 1) {
-            setCurrentCardIndex(currentCardIndex + 1);
-        }
-    };
-
-    return (
-        <div className='cards__block'>
-            <h2 className='card__title'>Карточки</h2>
-            <div className='card__container'>
-                {wordsData.map((word, index) => {
-                    return (
-                        <Card
-                            key={word.id}
-                            word={word.english}
-                            transcription={word.transcription}
-                            translate={word.russian}
-                            isVisible={index === currentCardIndex}
-                        />)
-                })}
-                <div className="slider__buttons">
-                    <button onClick={goToPreviousCard} disabled={currentCardIndex === 0}>Previous</button>
-                    <button onClick={goToNextCard} disabled={currentCardIndex === wordsData.length - 1}>Next</button>
-                </div>
-            </div>
-        </div>
-    )
-}*/

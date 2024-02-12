@@ -1,0 +1,23 @@
+.card__element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card__container {
+        margin: 0 5vw;
+    }
+
+    .arrow__button {
+        width: 50px;
+        cursor: pointer;
+        transition: filter 0.3s;
+    }
+
+    .arrow__left:hover {
+        filter: drop-shadow(4px 4px 6px #27AAE1);
+    }
+
+    .arrow__right:hover {
+        filter: drop-shadow(4px 4px 6px #F7941D);
+    }
+}
