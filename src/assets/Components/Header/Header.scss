@@ -3,15 +3,34 @@
 
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
-    .header__logo_img {
-        max-height: 10vh;
+    .header__logo {
+        display: flex;
+
+        .header__logo_img {
+            max-height: 10vh;
+            margin-left: 2vw;
+        }
     }
 
-    .menu__menu {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3vw;
+    .header__menu {
+        display: flex;
+        align-items: center;
+
+        .menu__list {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            .menu__item {
+                margin: 0 2vw;
+            }
+        }
     }
+}
+
+a {
+    text-decoration: none;
 }
