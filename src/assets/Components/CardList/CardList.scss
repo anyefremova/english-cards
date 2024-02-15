@@ -1,25 +1,34 @@
 @import '/src/assets/style/vars.scss';
 
-.card__element {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cards__block {
+    padding-top: 15vh;
+    background-color: $gray;
 
-    .card__container {
-        margin: 0 5vw;
-    }
+    .card__element {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    .arrow__button {
-        width: 50px;
-        cursor: pointer;
-        transition: filter 0.3s;
-    }
+        .card__container {
+            margin: 0 5vw;
+        }
 
-    .arrow__left:hover {
-        @extend %drop_shadow_blue;
-    }
+        .arrow__button {
+            width: 50px;
+            cursor: pointer;
+            transition: filter 0.3s;
+        }
 
-    .arrow__right:hover {
-        @extend %drop_shadow_orange;
+        .arrow__left:hover {
+            @extend %drop_shadow_blue;
+        }
+
+        .arrow__right:hover {
+            @extend %drop_shadow_orange;
+        }
     }
+}
+
+h2 {
+    margin: 0;
 }

@@ -4,9 +4,19 @@
 .header {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    background-color: white;
+    transition: background-color 0.3s ease;
+    min-height: 5vh;
+
+    &__scrolled {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
     .header__logo {
         display: flex;
+        margin-left: 2vw;
 
         .header__logo_img {
             max-height: 10vh;
@@ -17,6 +27,7 @@
     .header__menu {
         display: flex;
         align-items: center;
+        margin-right: 2vw;
 
         .menu__list {
             display: flex;
