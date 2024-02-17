@@ -1,11 +1,14 @@
 import './Card.scss';
 import { useState } from 'react';
 
-export default function Card({ word, transcription, translate }) {
+export default function Card({ word, transcription, translate, onWordLearned }) {
     const [showTranslate, setShowTranslate] = useState(false);
 
     const toggleTranslate = () => {
         setShowTranslate(!showTranslate);
+        if (!showTranslate) {
+            onWordLearned();
+        }
     };
 
     return (

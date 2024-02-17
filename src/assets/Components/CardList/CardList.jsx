@@ -7,6 +7,7 @@ import arrowRight from '../../images/arrowRight.png';
 
 export default function CardList({ initialCardIndex = 0 }) {
     const [currentCardIndex, setCurrentCardIndex] = useState(initialCardIndex);
+    const [wordsLearned, setWordsLearned] = useState(0);
 
     const goToPreviousCard = () => {
         if (currentCardIndex > 0) {
@@ -18,6 +19,10 @@ export default function CardList({ initialCardIndex = 0 }) {
         if (currentCardIndex < wordsData.length - 1) {
             setCurrentCardIndex(currentCardIndex + 1);
         }
+    };
+
+    const handleWordLearned = () => {
+        setWordsLearned(wordsLearned + 1);
     };
 
     return (
@@ -36,6 +41,7 @@ export default function CardList({ initialCardIndex = 0 }) {
                             word={wordsData[currentCardIndex].english}
                             transcription={wordsData[currentCardIndex].transcription}
                             translate={wordsData[currentCardIndex].russian}
+                            onWordLearned={handleWordLearned}
                         />
                     )}
                 </div>
@@ -44,6 +50,9 @@ export default function CardList({ initialCardIndex = 0 }) {
                         <img src={arrowRight} alt="Стрелка вправо" onClick={goToNextCard} className="arrow__button arrow__right" />
                     )}
                 </div>
+            </div>
+            <div className='card__learned_words'>
+                <p className='learned__words'>Количество изученных слов: {wordsLearned}</p>
             </div>
         </div>
 

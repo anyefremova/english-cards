@@ -13,7 +13,7 @@
         color: $gray;
         min-width: 35vw;
         min-height: 45vh;
-        margin: 3vw 0;
+        margin: 3vw 0 0 0;
         padding: 3vw 0;
         border-radius: 8%;
 
@@ -28,7 +28,7 @@
         }
 
         .card__translate {
-            color: #F7941D;
+            color: $orange;
             margin-top: 7vh;
             font-weight: 700;
             font-size: 1.75rem;
