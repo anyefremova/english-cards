@@ -4,7 +4,7 @@ import deleteButton from '../../images/deleteButton.png'
 
 import { useState } from 'react';
 
-export default function TableStructure(props) {
+export default function TableStructure({ word, translate, transcription, category }) {
     const [isEditing, setIsEditing] = useState(false);
 
     const handleEditClick = () => {
@@ -21,10 +21,10 @@ export default function TableStructure(props) {
 
     return (
         <div className='table__hedings__content'>
-            <div className='table__headings__word'>{props.word}</div>
-            <div className='table__headings__translate'>{props.translate}</div>
-            <div className='table__headings__transcription'>{props.transcription}</div>
-            <div className='table__headings__category'>{props.category}</div>
+            <div className='table__headings__word'>{word}</div>
+            <div className='table__headings__translate'>{translate}</div>
+            <div className='table__headings__transcription'>{transcription}</div>
+            <div className='table__headings__category'>{category}</div>
             <div className='table__headings__edit'>
                 {isEditing ? (
                     <>
