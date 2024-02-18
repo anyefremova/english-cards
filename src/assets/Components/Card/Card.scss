@@ -51,5 +51,11 @@
                 transition: background-color 0.8s, color 0.8s, border-color 0.8s;
             }
         }
+
+        .check__translate:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(39, 170, 225, 0.5);
+            transition: all 0.3s;
+        }
     }
 }
