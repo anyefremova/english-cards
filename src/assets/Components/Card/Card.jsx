@@ -1,8 +1,15 @@
 import './Card.scss';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Card({ word, transcription, translate, onWordLearned }) {
     const [showTranslate, setShowTranslate] = useState(false);
+    const translateButtonRef = useRef(null);
+
+    useEffect(() => {
+        if (!showTranslate && translateButtonRef.current) {
+            translateButtonRef.current.focus();
+        }
+    }, [showTranslate]);
 
     const toggleTranslate = () => {
         setShowTranslate(!showTranslate);
@@ -22,7 +29,7 @@ export default function Card({ word, transcription, translate, onWordLearned }) 
                     <div className='card__translate'>{translate}</div>
                 ) : (
                     <div className='card__button'>
-                        <button className='check__translate' onClick={toggleTranslate}>Показать перевод</button>
+                        <button className='check__translate' onClick={toggleTranslate} ref={translateButtonRef}>Показать перевод</button>
                     </div>
                 )}
             </div>
