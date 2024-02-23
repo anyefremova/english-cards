@@ -1,7 +1,6 @@
 import './TableStructure.scss';
 import editButton from '../../images/editButton.png';
 import deleteButton from '../../images/deleteButton.png'
-
 import { useState } from 'react';
 
 export default function TableStructure({ word, translate, transcription, category }) {
