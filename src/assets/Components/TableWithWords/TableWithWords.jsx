@@ -20,6 +20,7 @@ export default function TableWithWords() {
                     return (
                         <TableStructure
                             key={word.id}
+                            id={word.id}
                             word={word.english}
                             translate={word.russian}
                             transcription={word.transcription}

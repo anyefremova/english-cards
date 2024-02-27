@@ -3,8 +3,12 @@ import editButton from '../../images/editButton.png';
 import deleteButton from '../../images/deleteButton.png'
 import { useState } from 'react';
 
-export default function TableStructure({ word, translate, transcription, category }) {
+export default function TableStructure({ id, word: initialWord, translate: initialTranslate, transcription: initialTranscription, category: initialCategory }) {
     const [isEditing, setIsEditing] = useState(false);
+    const [word, setWord] = useState(initialWord);
+    const [translate, setTranslate] = useState(initialTranslate);
+    const [transcription, setTranscription] = useState(initialTranscription);
+    const [category, setCategory] = useState(initialCategory);
 
     const handleEditClick = () => {
         setIsEditing(!isEditing);
@@ -20,10 +24,34 @@ export default function TableStructure({ word, translate, transcription, categor
 
     return (
         <div className='table__hedings__content'>
-            <div className='table__headings__word'>{word}</div>
-            <div className='table__headings__translate'>{translate}</div>
-            <div className='table__headings__transcription'>{transcription}</div>
-            <div className='table__headings__category'>{category}</div>
+            <div className='table__headings__word'>
+                {isEditing ? (
+                    <input type="text" value={word} onChange={(e) => setWord(e.target.value)} />
+                ) : (
+                    word
+                )}
+            </div>
+            <div className='table__headings__translate'>
+                {isEditing ? (
+                    <input type="text" value={translate} onChange={(e) => setTranslate(e.target.value)} />
+                ) : (
+                    translate
+                )}
+            </div>
+            <div className='table__headings__transcription'>
+                {isEditing ? (
+                    <input type="text" value={transcription} onChange={(e) => setTranscription(e.target.value)} />
+                ) : (
+                    transcription
+                )}
+            </div>
+            <div className='table__headings__category'>
+                {isEditing ? (
+                    <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
+                ) : (
+                    category
+                )}
+            </div>
             <div className='table__headings__edit'>
                 {isEditing ? (
                     <>
