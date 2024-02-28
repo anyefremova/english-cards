@@ -1,7 +1,7 @@
 import './TableStructure.scss';
 import editButton from '../../images/editButton.png';
 import deleteButton from '../../images/deleteButton.png'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function TableStructure({ id, word: initialWord, translate: initialTranslate, transcription: initialTranscription, category: initialCategory }) {
     const [isEditing, setIsEditing] = useState(false);
@@ -9,6 +9,7 @@ export default function TableStructure({ id, word: initialWord, translate: initi
     const [translate, setTranslate] = useState(initialTranslate);
     const [transcription, setTranscription] = useState(initialTranscription);
     const [category, setCategory] = useState(initialCategory);
+    const [isEmpty, setIsEmpty] = useState(false);
 
     const handleEditClick = () => {
         setIsEditing(!isEditing);
@@ -22,8 +23,13 @@ export default function TableStructure({ id, word: initialWord, translate: initi
         setIsEditing(false);
     };
 
+    useEffect(() => {
+        const emptyFields = word.trim() === '' || translate.trim() === '' || transcription.trim() === '' || category.trim() === '';
+        setIsEmpty(emptyFields);
+    }, [word, translate, transcription, category]);
+
     return (
-        <div className='table__hedings__content'>
+        <div className={`table__hedings__content ${isEmpty ? 'empty__field' : ''}`}>
             <div className='table__headings__word'>
                 {isEditing ? (
                     <input type="text" value={word} onChange={(e) => setWord(e.target.value)} />
@@ -56,7 +62,7 @@ export default function TableStructure({ id, word: initialWord, translate: initi
                 {isEditing ? (
                     <>
                         <div className='editing__buttons'>
-                            <button onClick={handleSaveClick} className='button__editing button__save'>Сохранить</button>
+                            <button onClick={handleSaveClick} className={`button__editing button__save ${isEmpty ? 'disabled' : ''}`} disabled={isEmpty}>Сохранить</button>
                             <button onClick={handleCancelClick} className='button__editing button__cancel'>Отменить</button>
                         </div>
                     </>
@@ -69,6 +75,6 @@ export default function TableStructure({ id, word: initialWord, translate: initi
                     </>
                 )}
             </div>
-        </div>
+        </div >
     );
 }
