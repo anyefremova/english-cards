@@ -58,4 +58,9 @@
     .image__delete:hover {
         @extend %drop_shadow_orange;
     }
+
+    .empty-input {
+        border: 2px solid red;
+        border-radius: 5px;
+    }
 }
