@@ -30,18 +30,39 @@ export default function TableStructure({ id, word: initialWord, translate: initi
         setIsEmpty(emptyFields);
     }, [word, translate, transcription, category]);
 
+    const handleWordChange = (e) => {
+        const value = e.target.value;
+        if (/^[A-Za-z\s]+$/.test(value)) {
+            setWord(value);
+        }
+    };
+
+    const handleTranslateChange = (e) => {
+        const value = e.target.value;
+        if (/^[а-яА-Я\s]+$/.test(value)) {
+            setTranslate(value);
+        }
+    };
+
+    const handleCategoryChange = (e) => {
+        const value = e.target.value;
+        if (/^[а-яА-Я\s]+$/.test(value)) {
+            setCategory(value);
+        }
+    };
+
     return (
         <div className={`table__hedings__content ${isEmpty ? 'empty__field' : ''}`}>
             <div className='table__headings__word'>
                 {isEditing ? (
-                    <input type="text" value={word} onChange={(e) => setWord(e.target.value)} className={word.trim() === '' ? 'empty-input' : ''} />
+                    <input type="text" value={word} onChange={handleWordChange} className={word.trim() === '' ? 'empty-input' : ''} />
                 ) : (
                     word
                 )}
             </div>
             <div className='table__headings__translate'>
                 {isEditing ? (
-                    <input type="text" value={translate} onChange={(e) => setTranslate(e.target.value)} className={translate.trim() === '' ? 'empty-input' : ''} />
+                    <input type="text" value={translate} onChange={handleTranslateChange} className={translate.trim() === '' ? 'empty-input' : ''} />
                 ) : (
                     translate
                 )}
@@ -55,7 +76,7 @@ export default function TableStructure({ id, word: initialWord, translate: initi
             </div>
             <div className='table__headings__category'>
                 {isEditing ? (
-                    <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} className={category.trim() === '' ? 'empty-input' : ''} />
+                    <input type="text" value={category} onChange={handleCategoryChange} className={category.trim() === '' ? 'empty-input' : ''} />
                 ) : (
                     category
                 )}
